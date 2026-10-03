@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+@import "tailwindcss";
 @source "../src";
 @import "tw-animate-css";
 
@@ -34,30 +34,43 @@
 }
 
 :root {
-  --background: oklch(0.978 0.013 79);
-  --foreground: oklch(0.28 0.055 45);
-  --card: oklch(0.995 0.006 75);
-  --card-foreground: oklch(0.28 0.055 45);
-  --popover: oklch(0.995 0.006 75);
-  --popover-foreground: oklch(0.28 0.055 45);
-  --primary: oklch(0.31 0.064 42);
-  --primary-foreground: oklch(0.978 0.013 79);
-  --secondary: oklch(0.936 0.025 65);
-  --secondary-foreground: oklch(0.31 0.064 42);
-  --muted: oklch(0.943 0.016 75);
-  --muted-foreground: oklch(0.51 0.035 53);
-  --accent: oklch(0.902 0.056 34);
-  --accent-foreground: oklch(0.31 0.064 42);
-  --border: oklch(0.82 0.027 57);
-  --input: oklch(0.88 0.022 62);
-  --ring: oklch(0.55 0.095 36);
+  --background: oklch(0.16 0.006 80);
+  --foreground: oklch(0.96 0.026 85);
+  --card: oklch(0.23 0.012 80);
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.23 0.012 80);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.81 0.14 78);
+  --primary-foreground: oklch(0.17 0.012 80);
+  --secondary: oklch(0.23 0.028 158);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.26 0.012 80);
+  --muted-foreground: oklch(0.79 0.023 85);
+  --accent: oklch(0.35 0.045 155);
+  --accent-foreground: var(--foreground);
+  --border: oklch(0.68 0.095 78 / 0.35);
+  --input: oklch(0.68 0.095 78 / 0.45);
+  --ring: var(--primary);
   --destructive: oklch(0.56 0.19 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --blush: oklch(0.91 0.049 32);
-  --blush-deep: oklch(0.78 0.086 30);
-  --cocoa: oklch(0.28 0.055 45);
-  --olive: oklch(0.47 0.068 132);
+  --blush: oklch(0.62 0.16 28);
+  --blush-deep: oklch(0.77 0.13 42);
+  --cocoa: var(--background);
+  --olive: oklch(0.81 0.08 145);
+  --site-overlay: oklch(0.12 0.006 80 / 0.83);
+  --video-overlay: linear-gradient(90deg, oklch(0.12 0.006 80 / 0.87), oklch(0.12 0.006 80 / 0.46) 58%, oklch(0.12 0.006 80 / 0.18));
 }
+
+.bonita-backdrop, .bonita-backdrop-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  pointer-events: none;
+}
+.bonita-backdrop { z-index: -2; object-fit: cover; object-position: center; }
+.bonita-backdrop-overlay { z-index: -1; background: var(--site-overlay); }
+.bonita-video-overlay { background: var(--video-overlay); }
 
 @layer base {
   * { border-color: var(--border); }

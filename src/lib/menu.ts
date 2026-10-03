@@ -65,7 +65,7 @@ export const sections: MenuSection[] = [
       { name: "Frappe", price: "120" }, { name: "Frappuccino", price: "120" },
       { name: "Mojito", price: "95" }, { name: "Juices", price: "90" },
       { name: "Smoothies", price: "90" }, { name: "Milk Shake", price: "90" },
-      { name: "V Cola", price: "40" }, { name: "Red Bull", price: "90" }, { name: "Water", price: "10" },
+      { name: "Red Bull", price: "90" }, { name: "V Cola", price: "40" }, { name: "Water", price: "10" },
     ],
   },
   {
