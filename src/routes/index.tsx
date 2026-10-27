@@ -220,7 +220,17 @@ function Index() {
           <div className="mx-auto grid max-w-[1440px] gap-12 px-6 sm:px-8 lg:grid-cols-2 lg:items-end lg:px-12">
             <div><p className="text-[11px] font-bold uppercase tracking-[0.22em] text-blush-deep">See you soon</p><h2 className="mt-4 max-w-[650px] font-display text-6xl font-semibold leading-[0.9] sm:text-8xl">Good food.<br /><em className="font-normal">Better mood.</em></h2></div>
             <div className="grid gap-5 border-t border-border pt-7 text-sm lg:ml-auto lg:w-full lg:max-w-[420px]">
-              <div className="flex items-center gap-3"><MapPin className="size-5 shrink-0" />Area 51</div>
+              <a
+                href="https://maps.google.com/?q=31.110114,30.948023"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Bonita location in maps"
+                className="flex items-center gap-3 hover:text-blush-deep transition-colors"
+              >
+                <MapPin className="size-5 shrink-0" />
+                Kafr El Sheikh — Area 51
+                <ArrowRight className="ml-auto size-4" />
+              </a>
               {/* Phone contact popover */}
               <ContactPopover />
               <div className="flex items-center gap-4 pt-1">
